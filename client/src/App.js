@@ -5,6 +5,7 @@ import axios from "axios";
 import { baseURL, config } from "./services";
 import Sidebar from "./components/Sidebar";
 import Exercises from "./components/Exercises";
+import Form from "./components/Form"
 
 function App() {
   const [equipment, setEquipment] = useState([]);
