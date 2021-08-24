@@ -1,6 +1,7 @@
 import { baseURL, config } from "../services";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
+import { useParams } from 'react-router-dom'
 
 function Form(props) {
   const [exercise, setExercise] = useState("");
@@ -9,6 +10,23 @@ function Form(props) {
   const [equipment, setEquipment] = useState("");
   const [workoutInfo, setWorkoutInfo] = useState("");
   const [workoutTips, setWorkoutTips] = useState("");
+
+  const params = useParams()
+
+  // test code
+  useEffect(() => {
+    if(params.id && props.exercises.length > 0) {
+        const exerciseToEdit = props.exercises.find(exercise => params.id === exercise.id)
+        if(exerciseToEdit) {
+          setExercise(exerciseToEdit.fields.exercise)
+          setEquipment(exerciseToEdit.fields.equipment)
+          setBodyPart(exerciseToEdit.fields.bodyPart)
+          setVideoUrl(exerciseToEdit.fields.videoUrl)
+          setWorkoutInfo(exerciseToEdit.fields.workoutInfo)
+          setWorkoutTips(exerciseToEdit.fields.workoutTips)
+        }
+    }
+}, [params.id, props.exercises])
 
   const handleSubmit = async (event) => {
     event.preventDefault();

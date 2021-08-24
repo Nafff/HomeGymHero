@@ -5,14 +5,12 @@ import axios from "axios";
 import { baseURL, config } from "./services";
 import Sidebar from "./components/Sidebar";
 import Exercises from "./components/Exercises";
-import Form from "./components/Form"
+import Form from "./components/Form";
 
 function App() {
   const [equipment, setEquipment] = useState([]);
-  const [toggleFetch, setToggleFetch] = useState(false)
-
-  // test code
-  const [exercises, setExercises] = useState([])
+  const [exercises, setExercises] = useState([]);
+  const [toggleFetch, setToggleFetch] = useState(false);
 
   const equipPieces = ["Barbell", "Dumbbells", "Kettlebells"];
 
@@ -53,13 +51,20 @@ function App() {
           </>
         </Route>
         <Route path="/exercises/">
-          <Exercises equipment={equipment} exercises={exercises} setToggleFetch={setToggleFetch}/>
+          <Exercises
+            equipment={equipment}
+            exercises={exercises}
+            setToggleFetch={setToggleFetch}
+          />
         </Route>
         <Route path="/exercises/:id">
-          <Form />
+          <h1>Exercise Detail Here</h1>
         </Route>
         <Route path="/new/">
-          <Form setToggleFetch={setToggleFetch}/>
+          <Form setToggleFetch={setToggleFetch} />
+        </Route>
+        <Route path="/edit/:id">
+          <Form exercises={exercises} setToggleFetch={setToggleFetch} />
         </Route>
       </main>
     </div>
