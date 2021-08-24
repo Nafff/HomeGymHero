@@ -9,16 +9,20 @@ import Form from "./components/Form"
 
 function App() {
   const [equipment, setEquipment] = useState([]);
+  const [toggleFetch, setToggleFetch] = useState(false)
+
+  // test code
+  const [exercises, setExercises] = useState([])
 
   const equipPieces = ["Barbell", "Dumbbells", "Kettlebells"];
 
-  // useEffect(() => {
-  //   const getEquipment = async () => {
-  //     const resp = await axios.get(baseURL, config);
-  //     setEquipment(resp.data.records);
-  //   };
-  //   getEquipment();
-  // }, []);
+  useEffect(() => {
+    const getExercises = async () => {
+      const resp = await axios.get(baseURL, config);
+      setExercises(resp.data.records);
+    };
+    getExercises();
+  }, [toggleFetch]);
 
   const handleClick = (event) => {
     event.preventDefault();
@@ -49,10 +53,13 @@ function App() {
           </>
         </Route>
         <Route path="/exercises/">
-          <Exercises equipment={equipment}/>
+          <Exercises equipment={equipment} exercises={exercises} setToggleFetch={setToggleFetch}/>
+        </Route>
+        <Route path="/exercises/:id">
+          <Form />
         </Route>
         <Route path="/new/">
-          <Form />
+          <Form setToggleFetch={setToggleFetch}/>
         </Route>
       </main>
     </div>

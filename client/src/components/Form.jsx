@@ -22,13 +22,12 @@ function Form(props) {
         workoutTips,
       },
     };
-    console.log(newExercise);
     try {
       axios.post(baseURL, newExercise, config);
     } catch (error) {
       console.log(error);
     }
-    // props.setToggleFetch((prevState) => !prevState)
+    props.setToggleFetch((prevState) => !prevState)
   };
 
   return (
