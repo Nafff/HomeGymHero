@@ -1,4 +1,4 @@
-export const baseURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_APP}/homegym`
+export const baseURL = `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_APP}/homegym/`
 
 export const config = {
   headers: {

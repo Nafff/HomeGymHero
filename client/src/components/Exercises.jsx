@@ -9,6 +9,7 @@ function Exercises(props) {
   useEffect(() => {
     const getExercises = async () => {
       const resp = await axios.get(baseURL, config);
+      console.log(resp)
       setExercises(resp.data.records);
     };
     getExercises();
