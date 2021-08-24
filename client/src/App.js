@@ -57,7 +57,7 @@ function App() {
             setToggleFetch={setToggleFetch}
           />
         </Route>
-        <Route path="/exercises/:id">
+        <Route path="/exerciseinfo/:id">
           <h1>Exercise Detail Here</h1>
         </Route>
         <Route path="/new/">

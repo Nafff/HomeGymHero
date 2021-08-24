@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom'
 import axios from "axios";
 import { baseURL, config } from "../services";
 
@@ -13,8 +14,7 @@ function Exercises(props) {
       <h1>Hello here are exercises</h1>
       {availEx.map((exercise) => (
         <>
-        {console.log(exercise)}
-          <p>{exercise.fields.exercise}</p>
+          <Link to={`/exerciseinfo/${exercise.id}`}>{exercise.fields.exercise}</Link>
         </>
       ))
       }
