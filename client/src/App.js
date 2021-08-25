@@ -6,11 +6,13 @@ import { baseURL, config } from "./services";
 import Sidebar from "./components/Sidebar";
 import Exercises from "./components/Exercises";
 import Form from "./components/Form";
+import ExerciseInfo from "./components/ExerciseInfo";
 
 function App() {
   const [equipment, setEquipment] = useState([]);
   const [exercises, setExercises] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
+  const [workout, setWorkout] = useState([]);
 
   const equipPieces = ["Barbell", "Dumbbells", "Kettlebells"];
 
@@ -33,7 +35,14 @@ function App() {
     <div className="App">
       <nav>
         <Link to="/">Home</Link>
-        <Sidebar equipment={equipment} />
+        <Sidebar
+          equipment={equipment}
+          exercises={exercises}
+          setEquipment={setEquipment}
+          workout={workout}
+          setWorkout={setWorkout}
+          setToggleFetch={setToggleFetch}
+        />
       </nav>
       <main>
         <Route path="/" exact>
@@ -54,11 +63,18 @@ function App() {
           <Exercises
             equipment={equipment}
             exercises={exercises}
+            workout={workout}
+            setWorkout={setWorkout}
             setToggleFetch={setToggleFetch}
           />
         </Route>
         <Route path="/exerciseinfo/:id">
-          <h1>Exercise Detail Here</h1>
+          <ExerciseInfo
+            exercises={exercises}
+            workout={workout}
+            setWorkout={setWorkout}
+            setToggleFetch={setToggleFetch}
+          />
         </Route>
         <Route path="/new/">
           <Form setToggleFetch={setToggleFetch} />

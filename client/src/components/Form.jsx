@@ -1,7 +1,7 @@
 import { baseURL, config } from "../services";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 
 function Form(props) {
   const [exercise, setExercise] = useState("");
@@ -12,6 +12,7 @@ function Form(props) {
   const [workoutTips, setWorkoutTips] = useState("");
 
   const params = useParams()
+  const history = useHistory()
 
   // test code
   useEffect(() => {
@@ -45,6 +46,7 @@ function Form(props) {
     } catch (error) {
       console.log(error);
     }
+    history.push("/exercises")
     props.setToggleFetch((prevState) => !prevState)
   };
 
@@ -61,8 +63,8 @@ function Form(props) {
         <option value="select body part" defaultValue>
           Select Body Part
         </option>
-        <option value="chest">Chest</option>
-        <option value="biceps">Biceps</option>
+        <option value="Chest">Chest</option>
+        <option value="Biceps">Biceps</option>
       </select>
       <select
         name="select equipment"
@@ -71,8 +73,8 @@ function Form(props) {
         <option value="select equipment" defaultValue>
           Select Equipment
         </option>
-        <option value="barbell">Barbell</option>
-        <option value="dumbbells">Dumbells</option>
+        <option value="Barbell">Barbell</option>
+        <option value="Dumbbells">Dumbells</option>
       </select>
       <label htmlFor="workout description">Add Workout Description: </label>
       <textarea
