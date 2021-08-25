@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import Button from "react-bootstrap/Button";
+import Button from "@material-ui/core/Button";
+import IconButton from '@material-ui/core/IconButton';
+import DeleteIcon from "@material-ui/icons/Delete";
 
 function Sidebar(props) {
   const [show, setShow] = useState(false);
@@ -38,7 +39,7 @@ function Sidebar(props) {
   return (
     <>
       <div>
-        <Button variant="primary" onClick={handleShow}>
+        <Button variant="contained" color="primary" onClick={handleShow}>
           Launch
         </Button>
         <Offcanvas show={show} onHide={handleClose} placement={"end"}>
@@ -55,6 +56,22 @@ function Sidebar(props) {
                     <button onClick={handleEquipRemove} value={piece}>
                       -
                     </button>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      onClick={handleEquipRemove}
+                      value={piece}
+                    >
+                      -
+                    </Button>
+                    <IconButton
+                      aria-label="delete"
+                      className="iconDeleteButton"
+                      onClick={handleEquipRemove}
+                      value={piece}
+                    >
+                      <DeleteIcon />
+                    </IconButton>
                   </>
                 ))}
               </ul>
@@ -70,6 +87,14 @@ function Sidebar(props) {
                     <button onClick={handleExerciseRemove} value={exercise}>
                       -
                     </button>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      onClick={handleExerciseRemove}
+                      value={exercise}
+                    >
+                      -
+                    </Button>
                   </>
                 ))}
               </ul>

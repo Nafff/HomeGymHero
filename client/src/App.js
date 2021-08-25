@@ -1,3 +1,4 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { Link, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -7,10 +8,21 @@ import Sidebar from "./components/Sidebar";
 import Exercises from "./components/Exercises";
 import Form from "./components/Form";
 import ExerciseInfo from "./components/ExerciseInfo";
+import Equipment from "./components/Equipment";
 
 // test
-{<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />}
-{ <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" /> }
+{
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  />;
+}
+{
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  />;
+}
 // test end
 
 function App() {
@@ -19,7 +31,7 @@ function App() {
   const [toggleFetch, setToggleFetch] = useState(false);
   const [workout, setWorkout] = useState([]);
 
-  const equipPieces = ["Barbell", "Dumbbells", "Kettlebells"];
+  // const equipPieces = ["Barbell", "Dumbbells", "Kettlebells"];
 
   useEffect(() => {
     const getExercises = async () => {
@@ -29,12 +41,12 @@ function App() {
     getExercises();
   }, [toggleFetch]);
 
-  const handleClick = (event) => {
-    event.preventDefault();
-    if (equipment.includes(event.target.value) !== true) {
-      setEquipment(equipment.concat(event.target.value));
-    }
-  };
+  // const handleClick = (event) => {
+  //   event.preventDefault();
+  //   if (equipment.includes(event.target.value) !== true) {
+  //     setEquipment(equipment.concat(event.target.value));
+  //   }
+  // };
 
   return (
     <div className="App">
@@ -51,7 +63,7 @@ function App() {
       </nav>
       <main>
         <Route path="/" exact>
-          {equipPieces.map((piece) => (
+          {/* {equipPieces.map((piece) => (
             <>
               <button onClick={handleClick} value={piece}>
                 {piece}
@@ -62,7 +74,11 @@ function App() {
             <Link to="/exercises/">
               <button>Generate Exercises</button>
             </Link>
-          </>
+          </> */}
+          <Equipment
+            equipment={equipment}
+            setEquipment={setEquipment}
+          />
         </Route>
         <Route path="/exercises/">
           <Exercises
