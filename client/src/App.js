@@ -8,6 +8,11 @@ import Exercises from "./components/Exercises";
 import Form from "./components/Form";
 import ExerciseInfo from "./components/ExerciseInfo";
 
+// test
+{<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />}
+{ <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" /> }
+// test end
+
 function App() {
   const [equipment, setEquipment] = useState([]);
   const [exercises, setExercises] = useState([]);
