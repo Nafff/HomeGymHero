@@ -43,10 +43,11 @@ function Sidebar(props) {
         </Button>
         <Offcanvas show={show} onHide={handleClose} placement={"end"}>
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+            <Offcanvas.Title>Your Gym</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <div className="ownedEquip">
+              <h4>Your Equipment</h4>
               <ul>
                 {props.equipment.map((piece) => (
                   <>
@@ -59,6 +60,7 @@ function Sidebar(props) {
               </ul>
             </div>
             <div className="selectedExercises">
+              <h4>Your Workout</h4>
               <ul>
                 {props.workout.map((exercise) => (
                   <>
