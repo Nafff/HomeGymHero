@@ -14,7 +14,6 @@ function Form(props) {
   const params = useParams()
   const history = useHistory()
 
-  // test code
   useEffect(() => {
     if(params.id && props.exercises.length > 0) {
         const exerciseToEdit = props.exercises.find(exercise => params.id === exercise.id)

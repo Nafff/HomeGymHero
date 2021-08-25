@@ -1,7 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import Offcanvas from 'react-bootstrap/Offcanvas'
+import Button from 'react-bootstrap/Button'
 
 function Sidebar(props) {
+  // Test Code
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  // Test code End
+
   const handleEquipRemove = (event) => {
     event.preventDefault();
     props.setEquipment(
@@ -23,7 +32,7 @@ function Sidebar(props) {
       const match = props.exercises.find(
         (exercise) => exercise.fields.exercise === name
       );
-      return match.id
+      return match.id;
     }
   };
 
@@ -54,6 +63,22 @@ function Sidebar(props) {
             </>
           ))}
         </ul>
+      </div>
+
+      {/* Test Code */}
+      <div>
+        <Button variant="primary" onClick={handleShow}>
+          Launch
+        </Button>
+        <Offcanvas show={show} onHide={handleClose} placement={"end"}>
+          <Offcanvas.Header closeButton>
+            <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          </Offcanvas.Header>
+          <Offcanvas.Body>
+            Some text as placeholder. In real life you can have the elements you
+            have chosen. Like, text, images, lists, etc.
+          </Offcanvas.Body>
+        </Offcanvas>
       </div>
     </>
   );
