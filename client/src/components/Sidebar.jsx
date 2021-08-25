@@ -1,15 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Offcanvas from 'react-bootstrap/Offcanvas'
-import Button from 'react-bootstrap/Button'
+import "bootstrap/dist/css/bootstrap.min.css";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import Button from "react-bootstrap/Button";
 
 function Sidebar(props) {
-  // Test Code
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  // Test code End
 
   const handleEquipRemove = (event) => {
     event.preventDefault();
@@ -38,34 +37,6 @@ function Sidebar(props) {
 
   return (
     <>
-      <div className="ownedEquip">
-        <ul>
-          {props.equipment.map((piece) => (
-            <>
-              <li>{piece}</li>{" "}
-              <button onClick={handleEquipRemove} value={piece}>
-                -
-              </button>
-            </>
-          ))}
-        </ul>
-      </div>
-      <div className="selectedExercises">
-        <ul>
-          {props.workout.map((exercise) => (
-            <>
-              <Link to={`/exerciseinfo/${handleExerciseId(exercise)}`}>
-                <li>{exercise}</li>
-              </Link>
-              <button onClick={handleExerciseRemove} value={exercise}>
-                -
-              </button>
-            </>
-          ))}
-        </ul>
-      </div>
-
-      {/* Test Code */}
       <div>
         <Button variant="primary" onClick={handleShow}>
           Launch
@@ -75,8 +46,32 @@ function Sidebar(props) {
             <Offcanvas.Title>Offcanvas</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            Some text as placeholder. In real life you can have the elements you
-            have chosen. Like, text, images, lists, etc.
+            <div className="ownedEquip">
+              <ul>
+                {props.equipment.map((piece) => (
+                  <>
+                    <li>{piece}</li>{" "}
+                    <button onClick={handleEquipRemove} value={piece}>
+                      -
+                    </button>
+                  </>
+                ))}
+              </ul>
+            </div>
+            <div className="selectedExercises">
+              <ul>
+                {props.workout.map((exercise) => (
+                  <>
+                    <Link to={`/exerciseinfo/${handleExerciseId(exercise)}`}>
+                      <li>{exercise}</li>
+                    </Link>
+                    <button onClick={handleExerciseRemove} value={exercise}>
+                      -
+                    </button>
+                  </>
+                ))}
+              </ul>
+            </div>
           </Offcanvas.Body>
         </Offcanvas>
       </div>
