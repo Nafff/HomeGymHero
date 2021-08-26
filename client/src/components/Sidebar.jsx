@@ -14,7 +14,7 @@ function Sidebar(props) {
   const handleEquipRemove = (event) => {
     event.preventDefault();
     props.setEquipment(
-      props.equipment.filter((piece) => piece !== event.target.value)
+      props.equipment.filter((piece) => piece !== event.currentTarget.value)
     );
     props.setToggleFetch((prevState) => !prevState);
   };
@@ -22,7 +22,7 @@ function Sidebar(props) {
   const handleExerciseRemove = (event) => {
     event.preventDefault();
     props.setWorkout(
-      props.workout.filter((exercise) => exercise !== event.target.value)
+      props.workout.filter((exercise) => exercise !== event.currentTarget.value)
     );
     props.setToggleFetch((prevState) => !prevState);
   };
@@ -53,9 +53,6 @@ function Sidebar(props) {
                 {props.equipment.map((piece) => (
                   <>
                     <li>{piece}</li>{" "}
-                    <button onClick={handleEquipRemove} value={piece}>
-                      -
-                    </button>
                     <Button
                       variant="contained"
                       color="primary"
@@ -84,9 +81,6 @@ function Sidebar(props) {
                     <Link to={`/exerciseinfo/${handleExerciseId(exercise)}`}>
                       <li>{exercise}</li>
                     </Link>
-                    <button onClick={handleExerciseRemove} value={exercise}>
-                      -
-                    </button>
                     <Button
                       variant="contained"
                       color="primary"
