@@ -53,8 +53,8 @@ function App() {
         setWorkout={setWorkout}
         setToggleFetch={setToggleFetch}
       />
-      <CssBaseline />
-      <Container maxWidth="sm">
+      {/* <CssBaseline />
+      <Container maxWidth="sm"> */}
         <main>
           <Route path="/" exact>
             <Equipment equipment={equipment} setEquipment={setEquipment} />
@@ -83,7 +83,7 @@ function App() {
             <Form exercises={exercises} setToggleFetch={setToggleFetch} />
           </Route>
         </main>
-      </Container>
+      {/* </Container> */}
     </div>
   );
 }
