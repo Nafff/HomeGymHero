@@ -135,6 +135,7 @@ function Form(props) {
           value={exercise}
           onChange={(e) => setExercise(e.target.value)}
         />
+        <br />
         <TextField
           id="outlined-helperText"
           label="Video URL:"
@@ -144,6 +145,7 @@ function Form(props) {
           value={videoUrl}
           onChange={(e) => setVideoUrl(e.target.value)}
         />
+        <br />
         <FormControl variant="outlined" className={classes.formControl}>
           <InputLabel id="demo-simple-select-outlined-label">
             Body Part
@@ -151,7 +153,7 @@ function Form(props) {
           <Select
             labelId="demo-simple-select-outlined-label"
             id="demo-simple-select-outlined"
-            // value={age}
+            value={bodyPart}
             onChange={(e) => setBodyPart(e.target.value)}
             label="Select Body Part"
           >
@@ -162,26 +164,48 @@ function Form(props) {
             <MenuItem value="Biceps">Biceps</MenuItem>
           </Select>
         </FormControl>
-        <select
-          name="select equipment"
-          onChange={(e) => setEquipment(e.target.value)}
-        >
-          <option value="select equipment" defaultValue>
-            Select Equipment
-          </option>
-          <option value="Barbell">Barbell</option>
-          <option value="Dumbbells">Dumbells</option>
-        </select>
-        <label htmlFor="workout description">Add Workout Description: </label>
-        <textarea
+        <br />
+        <FormControl variant="outlined" className={classes.formControl}>
+          <InputLabel id="demo-simple-select-outlined-label">
+            Equipment
+          </InputLabel>
+          <Select
+            labelId="demo-simple-select-outlined-label"
+            id="demo-simple-select-outlined"
+            value={equipment}
+            onChange={(e) => setEquipment(e.target.value)}
+            label="Select Body Part"
+          >
+            <MenuItem value="">
+              <em>None</em>
+            </MenuItem>
+            <MenuItem value="Barbell">Barbell</MenuItem>
+            <MenuItem value="Dumbbells">Dumbells</MenuItem>
+          </Select>
+        </FormControl>
+        <br />
+        <TextField
+          id="outlined-multiline-static"
+          label="Workout Description:"
+          multiline
+          rows={4}
+          defaultValue="Default Value"
+          variant="outlined"
           value={workoutInfo}
           onChange={(e) => setWorkoutInfo(e.target.value)}
         />
-        <label htmlFor="workout tips">Add Workout Tips: </label>
-        <textarea
+        <br />
+        <TextField
+          id="outlined-multiline-static"
+          label="Workout Tips:"
+          multiline
+          rows={4}
+          defaultValue="Default Value"
+          variant="outlined"
           value={workoutTips}
           onChange={(e) => setWorkoutTips(e.target.value)}
         />
+        <br />
         <input type="submit" value="Submit" />
       </div>
     </form>
