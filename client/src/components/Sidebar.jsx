@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Button from "@material-ui/core/Button";
-import IconButton from '@material-ui/core/IconButton';
+import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from "@material-ui/icons/Delete";
+import Fab from "@material-ui/core/Fab";
 
 function Sidebar(props) {
   const [show, setShow] = useState(false);
@@ -40,7 +41,7 @@ function Sidebar(props) {
     <>
       <div>
         <Button variant="contained" color="primary" onClick={handleShow}>
-          Launch
+          Your Gym
         </Button>
         <Offcanvas show={show} onHide={handleClose} placement={"end"}>
           <Offcanvas.Header closeButton>
@@ -52,23 +53,16 @@ function Sidebar(props) {
               <ul>
                 {props.equipment.map((piece) => (
                   <>
-                    <li>{piece}</li>{" "}
-                    <Button
-                      variant="contained"
+                    <li>{piece}</li>
+                    <Fab
+                      size="small"
                       color="primary"
-                      onClick={handleEquipRemove}
-                      value={piece}
-                    >
-                      -
-                    </Button>
-                    <IconButton
                       aria-label="delete"
-                      className="iconDeleteButton"
                       onClick={handleEquipRemove}
                       value={piece}
                     >
                       <DeleteIcon />
-                    </IconButton>
+                    </Fab>
                   </>
                 ))}
               </ul>

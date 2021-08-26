@@ -9,6 +9,10 @@ import Exercises from "./components/Exercises";
 import Form from "./components/Form";
 import ExerciseInfo from "./components/ExerciseInfo";
 import Equipment from "./components/Equipment";
+import Header from "./components/Header";
+
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Container from "@material-ui/core/Container";
 
 // test
 {
@@ -31,8 +35,6 @@ function App() {
   const [toggleFetch, setToggleFetch] = useState(false);
   const [workout, setWorkout] = useState([]);
 
-  // const equipPieces = ["Barbell", "Dumbbells", "Kettlebells"];
-
   useEffect(() => {
     const getExercises = async () => {
       const resp = await axios.get(baseURL, config);
@@ -41,69 +43,47 @@ function App() {
     getExercises();
   }, [toggleFetch]);
 
-  // const handleClick = (event) => {
-  //   event.preventDefault();
-  //   if (equipment.includes(event.target.value) !== true) {
-  //     setEquipment(equipment.concat(event.target.value));
-  //   }
-  // };
-
   return (
     <div className="App">
-      <nav>
-        <Link to="/">Home</Link>
-        <Sidebar
-          equipment={equipment}
-          exercises={exercises}
-          setEquipment={setEquipment}
-          workout={workout}
-          setWorkout={setWorkout}
-          setToggleFetch={setToggleFetch}
-        />
-      </nav>
-      <main>
-        <Route path="/" exact>
-          {/* {equipPieces.map((piece) => (
-            <>
-              <button onClick={handleClick} value={piece}>
-                {piece}
-              </button>
-            </>
-          ))}
-          <>
-            <Link to="/exercises/">
-              <button>Generate Exercises</button>
-            </Link>
-          </> */}
-          <Equipment
-            equipment={equipment}
-            setEquipment={setEquipment}
-          />
-        </Route>
-        <Route path="/exercises/">
-          <Exercises
-            equipment={equipment}
-            exercises={exercises}
-            workout={workout}
-            setWorkout={setWorkout}
-            setToggleFetch={setToggleFetch}
-          />
-        </Route>
-        <Route path="/exerciseinfo/:id">
-          <ExerciseInfo
-            exercises={exercises}
-            workout={workout}
-            setWorkout={setWorkout}
-            setToggleFetch={setToggleFetch}
-          />
-        </Route>
-        <Route path="/new/">
-          <Form setToggleFetch={setToggleFetch} />
-        </Route>
-        <Route path="/edit/:id">
-          <Form exercises={exercises} setToggleFetch={setToggleFetch} />
-        </Route>
-      </main>
+      <Header
+        equipment={equipment}
+        exercises={exercises}
+        setEquipment={setEquipment}
+        workout={workout}
+        setWorkout={setWorkout}
+        setToggleFetch={setToggleFetch}
+      />
+      <CssBaseline />
+      <Container maxWidth="sm">
+        <main>
+          <Route path="/" exact>
+            <Equipment equipment={equipment} setEquipment={setEquipment} />
+          </Route>
+          <Route path="/exercises/">
+            <Exercises
+              equipment={equipment}
+              exercises={exercises}
+              workout={workout}
+              setWorkout={setWorkout}
+              setToggleFetch={setToggleFetch}
+            />
+          </Route>
+          <Route path="/exerciseinfo/:id">
+            <ExerciseInfo
+              exercises={exercises}
+              workout={workout}
+              setWorkout={setWorkout}
+              setToggleFetch={setToggleFetch}
+            />
+          </Route>
+          <Route path="/new/">
+            <Form setToggleFetch={setToggleFetch} />
+          </Route>
+          <Route path="/edit/:id">
+            <Form exercises={exercises} setToggleFetch={setToggleFetch} />
+          </Route>
+        </main>
+      </Container>
     </div>
   );
 }

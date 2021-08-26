@@ -29,23 +29,6 @@ function Equipment(props) {
 
   const classes = useStyles();
 
-  // return (
-  //   <>
-  //     {equipPieces.map((piece) => (
-  //       <>
-  //         <button onClick={handleClick} value={piece}>
-  //           {piece}
-  //         </button>
-  //       </>
-  //     ))}
-  //     <>
-  //       <Link to="/exercises/">
-  //         <button>Generate Exercises</button>
-  //       </Link>
-  //     </>
-  //   </>
-  // );
-
   return (
     <>
       {equipPieces.map((piece) => (
@@ -64,7 +47,12 @@ function Equipment(props) {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary" onClick={handleClick} value={piece}>
+              <Button
+                size="small"
+                color="primary"
+                onClick={handleClick}
+                value={piece}
+              >
                 Add To List
               </Button>
               <Button size="small" color="primary">
