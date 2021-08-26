@@ -76,48 +76,6 @@ function Form(props) {
     props.setToggleFetch((prevState) => !prevState);
   };
 
-  // return (
-  //   <form onSubmit={handleSubmit} className={classes.root} noValidate autoComplete="off">
-  //     <div>
-  //     <label htmlFor="excerciseName">Exercise Name: </label>
-  //     <input value={exercise} onChange={(e) => setExercise(e.target.value)} />
-  //     <label htmlFor="excerciseName">Add Video URL: </label>
-  //     <input value={videoUrl} onChange={(e) => setVideoUrl(e.target.value)} />
-  //     <select
-  //       name="select body part"
-  //       onChange={(e) => setBodyPart(e.target.value)}
-  //     >
-  //       <option value="select body part" defaultValue>
-  //         Select Body Part
-  //       </option>
-  //       <option value="Chest">Chest</option>
-  //       <option value="Biceps">Biceps</option>
-  //     </select>
-  //     <select
-  //       name="select equipment"
-  //       onChange={(e) => setEquipment(e.target.value)}
-  //     >
-  //       <option value="select equipment" defaultValue>
-  //         Select Equipment
-  //       </option>
-  //       <option value="Barbell">Barbell</option>
-  //       <option value="Dumbbells">Dumbells</option>
-  //     </select>
-  //     <label htmlFor="workout description">Add Workout Description: </label>
-  //     <textarea
-  //       value={workoutInfo}
-  //       onChange={(e) => setWorkoutInfo(e.target.value)}
-  //     />
-  //     <label htmlFor="workout tips">Add Workout Tips: </label>
-  //     <textarea
-  //       value={workoutTips}
-  //       onChange={(e) => setWorkoutTips(e.target.value)}
-  //     />
-  //     <input type="submit" value="Submit" />
-  //     </div>
-  //   </form>
-  // );
-
   const classes = useStyles();
 
   return (
@@ -208,15 +166,14 @@ function Form(props) {
           onChange={(e) => setWorkoutTips(e.target.value)}
         />
         <br />
-        <input type="submit" value="Submit" />
         <Button
-        variant="contained"
-        color="secondary"
-        startIcon={<AddIcon />}
-        type="submit"
-      >
-        Submit
-      </Button>
+          variant="contained"
+          color="primary"
+          startIcon={<AddIcon />}
+          type="submit"
+        >
+          Submit
+        </Button>
       </div>
     </form>
   );
