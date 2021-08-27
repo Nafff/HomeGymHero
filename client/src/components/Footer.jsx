@@ -6,6 +6,9 @@ import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import AddBoxIcon from "@material-ui/icons/AddBox";
 import FitnessCenterIcon from "@material-ui/icons/FitnessCenter";
 import EventSeatIcon from "@material-ui/icons/EventSeat";
+import IconButton from "@material-ui/core/IconButton";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 const useStyles = makeStyles({
   root: {
@@ -28,6 +31,11 @@ function Footer(props) {
       showLabels
       className={classes.root}
     >
+      <IconButton aria-label="delete">
+        <a href="https://github.com/Nafff">
+          <GitHubIcon />
+        </a>
+      </IconButton>
       <BottomNavigationAction
         component={Link}
         to="/new/"
@@ -49,6 +57,11 @@ function Footer(props) {
         value="excercises"
         icon={<FitnessCenterIcon />}
       />
+      <IconButton aria-label="delete">
+        <a href="https://www.linkedin.com/in/jacob-adick-3388b3123/">
+          <LinkedInIcon />
+        </a>
+      </IconButton>
     </BottomNavigation>
   );
 }

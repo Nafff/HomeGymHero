@@ -1,5 +1,4 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
 import { Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -14,6 +13,7 @@ import Paper from "@material-ui/core/Paper";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
 import Footer from "./components/Footer";
+import "./App.css";
 
 {
   <link
@@ -79,7 +79,7 @@ function App() {
         />
         <CssBaseline />
         <Container maxWidth="md">
-          <Paper>
+          <Paper className="paperContainer">
             <main>
               <Route path="/" exact>
                 <Equipment equipment={equipment} setEquipment={setEquipment} />
