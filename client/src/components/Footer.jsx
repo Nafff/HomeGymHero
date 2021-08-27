@@ -20,7 +20,7 @@ const useStyles = makeStyles({
 
 function Footer(props) {
   const classes = useStyles();
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState('equipment');
 
   return (
     <BottomNavigation

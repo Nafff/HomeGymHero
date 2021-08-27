@@ -1,6 +1,6 @@
 # Project Overview
 
-URL here
+https://homegymhero.netlify.app/
 
 ## Project Name
 
@@ -60,6 +60,7 @@ https://whimsical.com/home-gym-helper-6yCTeQokT1CvYDAmexeehp
 
 #### PostMVP  
 
+- Can search for exercises by name or body part
 - Use local storage to save user favorites
 - Gamify workouts through exp gain based on amount of pounds lifted
 - Adding multiple body parts to certain exercises so they can be accessed multiple ways 
@@ -81,20 +82,21 @@ https://whimsical.com/home-gym-helper-6yCTeQokT1CvYDAmexeehp
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Basic HTML/CSS/JS | H | 2hrs| 0hrs | 0hrs |
-| Populate API | H | 2hrs| 0hrs | 0hrs |
-| Create Components | H | 1hrs| 0hrs | 0hrs |
-| Link API | H | 1hrs| 0hrs | 0hrs |
-| Create States | H | 2hrs| 0hrs | 0hrs |
-| Main page | H | 3hrs| 0hrs | 0hrs |
-| Side bar | H | 5hrs| 0hrs | 0hrs |
-| Excersizes component | H | 4hrs| 0hrs | 0hrs |
-| Excersize component | H | 4hrs| 0hrs | 0hrs |
-| Form component | H | 4hrs| 0hrs | 0hrs |
-| Styling | H | 6hrs| 0hrs | 0hrs |
+| Basic HTML/CSS/JS | H | 2hrs| 2hrs | 2hrs |
+| Populate API | H | 2hrs| 2hrs | 4hrs |
+| Create Components | H | 1hrs| 0.5hrs | 4.5hrs |
+| Link API | H | 1hrs| 0.5hrs | 5hrs |
+| Create States | H | 2hrs| 2hrs | 7hrs |
+| Main page | H | 3hrs| 4hrs | 11hrs |
+| Side bar | H | 5hrs| 7hrs | 18hrs |
+| Excersizes component | H | 4hrs| 6hrs | 24hrs |
+| Excersize Info component | H | 4hrs| 4hrs | 28hrs |
+| Form component | H | 4hrs| 4hrs | 32hrs |
+| Styling | H | 9hrs| 6hrs | 41hrs |
 | FlexBox / Grid | H | 8hrs| 0hrs | 0hrs |
 | Media Queries | H | 6hrs| 0hrs| 0hrs |
-| Total | H | 48hrs| 0hrs | 0hrs |
+| Material UI | H | 0hrs| 12hrs| 50hrs |
+| Total | H | 52hrs| 53hrs | 53hrs |
 
 ## Code Snippet
 
