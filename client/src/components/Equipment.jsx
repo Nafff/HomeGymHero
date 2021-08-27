@@ -67,7 +67,7 @@ function Equipment(props) {
                   onClick={handleClick}
                   value="Barbell"
                 >
-                  Add To List
+                  Add To Gym
                 </Button>
                 <Button size="small" color="primary">
                   Learn More
@@ -98,7 +98,7 @@ function Equipment(props) {
                   onClick={handleClick}
                   value="Dumbbells"
                 >
-                  Add To List
+                  Add To Gym
                 </Button>
                 <Button size="small" color="primary">
                   Learn More
@@ -129,7 +129,7 @@ function Equipment(props) {
                   onClick={handleClick}
                   value="Kettlebells"
                 >
-                  Add To List
+                  Add To Gym
                 </Button>
                 <Button size="small" color="primary">
                   Learn More
@@ -160,7 +160,7 @@ function Equipment(props) {
                   onClick={handleClick}
                   value="Bands"
                 >
-                  Add To List
+                  Add To Gym
                 </Button>
                 <Button size="small" color="primary">
                   Learn More
@@ -191,7 +191,7 @@ function Equipment(props) {
                   onClick={handleClick}
                   value="Cable Machine"
                 >
-                  Add To List
+                  Add To Gym
                 </Button>
                 <Button size="small" color="primary">
                   Learn More
@@ -222,7 +222,7 @@ function Equipment(props) {
                   onClick={handleClick}
                   value="Gymnastic Rings"
                 >
-                  Add To List
+                  Add To Gym
                 </Button>
                 <Button size="small" color="primary">
                   Learn More
