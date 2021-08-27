@@ -20,7 +20,7 @@ const useStyles = makeStyles({
 
 function Footer(props) {
   const classes = useStyles();
-  const [value, setValue] = useState('equipment');
+  const [value, setValue] = useState("equipment");
 
   return (
     <BottomNavigation
@@ -40,21 +40,21 @@ function Footer(props) {
         component={Link}
         to="/new/"
         label="Add New Exercise"
-        value="new"
+        value="/new/"
         icon={<AddBoxIcon />}
       />
       <BottomNavigationAction
         component={Link}
         to="/"
         label="Equipment"
-        value="equipment"
+        value="/"
         icon={<EventSeatIcon />}
       />
       <BottomNavigationAction
         component={Link}
         to="/exercises/"
         label="Exercises"
-        value="excercises"
+        value="/exercises/"
         icon={<FitnessCenterIcon />}
       />
       <IconButton aria-label="delete" color="primary">
