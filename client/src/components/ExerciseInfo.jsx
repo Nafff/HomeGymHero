@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
+import AddBoxIcon from "@material-ui/icons/AddBox";
 
 function ExerciseInfo(props) {
   const params = useParams();
@@ -18,6 +19,11 @@ function ExerciseInfo(props) {
     await axios.delete(`${baseURL}${params.id}`, config);
     history.push("/exercises");
     props.setToggleFetch((prevState) => !prevState);
+  };
+
+  const handleAdd = (event) => {
+    event.preventDefault();
+    props.setWorkout(props.workout.concat(event.currentTarget.value));
   };
 
   const useStyles = makeStyles((theme) => ({
@@ -61,6 +67,16 @@ function ExerciseInfo(props) {
         className={classes.exerciseButtons}
       >
         Delete
+      </Button>
+      <Button
+        variant="contained"
+        color="success"
+        startIcon={<AddBoxIcon />}
+        onClick={handleAdd}
+        className={classes.exerciseButtons}
+        value={selectedExercise.fields.exercise}
+      >
+        Add to Workout
       </Button>
     </>
   );

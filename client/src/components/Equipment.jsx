@@ -174,12 +174,12 @@ function Equipment(props) {
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image="https://res.cloudinary.com/dy6xpqkkj/image/upload/v1630053588/Home%20Gym%20Hero/pictures/squatrack_fgvsb3.jpg"
-                  title="Squat Rack"
+                  image="https://res.cloudinary.com/dy6xpqkkj/image/upload/v1630082835/Home%20Gym%20Hero/pictures/cables_revnbu.jpg"
+                  title="Cable Machine"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Squat Rack
+                    Cable Machine
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -188,7 +188,7 @@ function Equipment(props) {
                   size="small"
                   color="primary"
                   onClick={handleClick}
-                  value="Squat Rack"
+                  value="Cable Machine"
                 >
                   Add To List
                 </Button>

@@ -125,6 +125,12 @@ function Form(props) {
             </MenuItem>
             <MenuItem value="Chest">Chest</MenuItem>
             <MenuItem value="Biceps">Biceps</MenuItem>
+            <MenuItem value="Triceps">Triceps</MenuItem>
+            <MenuItem value="Shoulders">Shoulders</MenuItem>
+            <MenuItem value="Glutes">Glutes</MenuItem>
+            <MenuItem value="Quads">Quads</MenuItem>
+            <MenuItem value="Hamstrings">Hamstrings</MenuItem>
+            <MenuItem value="Calves">Calves</MenuItem>
           </Select>
         </FormControl>
         <br />
@@ -144,6 +150,10 @@ function Form(props) {
             </MenuItem>
             <MenuItem value="Barbell">Barbell</MenuItem>
             <MenuItem value="Dumbbells">Dumbells</MenuItem>
+            <MenuItem value="Kettlebells">Kettlebells</MenuItem>
+            <MenuItem value="Bands">Bands</MenuItem>
+            <MenuItem value="Cable Machine">Cable Machine</MenuItem>
+            <MenuItem value="Gymnastic Rings">Gymnastic Rings</MenuItem>
           </Select>
         </FormControl>
         <br />
