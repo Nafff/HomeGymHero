@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import AddBoxIcon from "@material-ui/icons/AddBox";
@@ -26,21 +27,7 @@ function Exercises(props) {
   const [dense, setDense] = useState(false);
 
   const useStyles = makeStyles((theme) => ({
-    root: {
-      maxWidth: 345,
-    },
-    media: {
-      height: 140,
-    },
-    gridRoot: {
-      flexGrow: 1,
-    },
-    gridCard: {
-      padding: theme.spacing(2),
-      textAlign: "center",
-      color: theme.palette.text.secondary,
-    },
-    generateButton: {
+    createButton: {
       marginTop: 10,
       marginBottom: 25,
     }
@@ -81,7 +68,7 @@ function Exercises(props) {
         ))}
       </List>
       <Link to={"/new/"}>
-        <Button variant="contained" color="primary" startIcon={<AddBoxIcon />}>
+        <Button variant="contained" color="primary" startIcon={<AddBoxIcon />} className={classes.createButton}>
           Create New Exercise
         </Button>
       </Link>

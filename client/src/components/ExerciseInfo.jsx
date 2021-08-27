@@ -1,6 +1,7 @@
 import { useParams, Link, useHistory } from "react-router-dom";
 import axios from "axios";
 import { baseURL, config } from "../services";
+import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
@@ -19,6 +20,15 @@ function ExerciseInfo(props) {
     props.setToggleFetch((prevState) => !prevState);
   };
 
+  const useStyles = makeStyles((theme) => ({
+    exerciseButtons: {
+      marginTop: 10,
+      marginBottom: 25,
+    },
+  }));
+
+  const classes = useStyles();
+
   return (
     <>
       <h1>{selectedExercise.fields.exercise}</h1>
@@ -32,7 +42,12 @@ function ExerciseInfo(props) {
       <p>{selectedExercise.fields.workoutInfo}</p>
       <p>{selectedExercise.fields.workoutTips}</p>
       <Link to={`/edit/${params.id}`}>
-        <Button variant="contained" color="primary" startIcon={<EditIcon />}>
+        <Button
+          variant="contained"
+          color="primary"
+          startIcon={<EditIcon />}
+          className={classes.exerciseButtons}
+        >
           Edit
         </Button>
       </Link>{" "}
@@ -41,6 +56,7 @@ function ExerciseInfo(props) {
         color="secondary"
         startIcon={<DeleteIcon />}
         onClick={deleteExercise}
+        className={classes.exerciseButtons}
       >
         Delete
       </Button>
