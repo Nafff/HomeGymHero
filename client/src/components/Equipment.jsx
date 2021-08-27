@@ -8,7 +8,6 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import "./Equipment.css"
 
 function Equipment(props) {
   const handleClick = (event) => {
@@ -51,8 +50,8 @@ function Equipment(props) {
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image="https://image.shutterstock.com/image-photo/crossfit-equipment-on-floor-gym-600w-756989800.jpg"
-                  title="Contemplative Reptile"
+                  image="https://res.cloudinary.com/dy6xpqkkj/image/upload/v1630053588/Home%20Gym%20Hero/pictures/barbells_orvgbr.jpg"
+                  title="Barbell"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
@@ -82,8 +81,8 @@ function Equipment(props) {
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image="https://image.shutterstock.com/image-photo/crossfit-equipment-on-floor-gym-600w-756989800.jpg"
-                  title="Contemplative Reptile"
+                  image="https://res.cloudinary.com/dy6xpqkkj/image/upload/v1630053588/Home%20Gym%20Hero/pictures/dumbbells_fhen6f.jpg"
+                  title="Dumbbells"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
@@ -113,8 +112,8 @@ function Equipment(props) {
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image="https://image.shutterstock.com/image-photo/crossfit-equipment-on-floor-gym-600w-756989800.jpg"
-                  title="Contemplative Reptile"
+                  image="https://res.cloudinary.com/dy6xpqkkj/image/upload/v1630053588/Home%20Gym%20Hero/pictures/kettlebells_lfsnqs.jpg"
+                  title="Kettlebells"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
@@ -144,8 +143,8 @@ function Equipment(props) {
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image="https://image.shutterstock.com/image-photo/crossfit-equipment-on-floor-gym-600w-756989800.jpg"
-                  title="Contemplative Reptile"
+                  image="https://res.cloudinary.com/dy6xpqkkj/image/upload/v1630053588/Home%20Gym%20Hero/pictures/bands_weixlr.jpg"
+                  title="Bands"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
@@ -175,12 +174,12 @@ function Equipment(props) {
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image="https://image.shutterstock.com/image-photo/crossfit-equipment-on-floor-gym-600w-756989800.jpg"
-                  title="Contemplative Reptile"
+                  image="https://res.cloudinary.com/dy6xpqkkj/image/upload/v1630053588/Home%20Gym%20Hero/pictures/squatrack_fgvsb3.jpg"
+                  title="Squat Rack"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Dumbbells
+                    Squat Rack
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -189,7 +188,7 @@ function Equipment(props) {
                   size="small"
                   color="primary"
                   onClick={handleClick}
-                  value="Dumbbells"
+                  value="Squat Rack"
                 >
                   Add To List
                 </Button>
@@ -206,12 +205,12 @@ function Equipment(props) {
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image="https://image.shutterstock.com/image-photo/crossfit-equipment-on-floor-gym-600w-756989800.jpg"
-                  title="Contemplative Reptile"
+                  image="https://res.cloudinary.com/dy6xpqkkj/image/upload/v1630053588/Home%20Gym%20Hero/pictures/rings_hag0kp.jpg"
+                  title="Gymnastic Rings"
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Dumbbells
+                    Gymnastic Rings
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -220,7 +219,7 @@ function Equipment(props) {
                   size="small"
                   color="primary"
                   onClick={handleClick}
-                  value="Dumbbells"
+                  value="Gymnastic Rings"
                 >
                   Add To List
                 </Button>

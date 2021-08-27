@@ -33,8 +33,10 @@ function ExerciseInfo(props) {
     <>
       <h1>{selectedExercise.fields.exercise}</h1>
       <iframe
-        width="420"
-        height="315"
+        // width="420"
+        // height="315"
+        width="250"
+        height="140"
         src={`https://www.youtube.com/embed/${selectedExercise.fields.videoUrl}`}
       ></iframe>
       <h2>{selectedExercise.fields.bodyPart}</h2>
