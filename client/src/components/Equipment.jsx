@@ -42,6 +42,7 @@ function Equipment(props) {
 
   return (
     <>
+      <h5>Select The Equipment Pieces You Own</h5>
       <div className={classes.gridRoot}></div>
       <Grid container spacing={3} justifyContent="center">
         <Grid item m>

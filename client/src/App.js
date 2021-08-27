@@ -81,6 +81,7 @@ function App() {
         <Container maxWidth="md">
           <Paper className="paperContainer">
             <main>
+              <br />
               <Route path="/" exact>
                 <Equipment equipment={equipment} setEquipment={setEquipment} />
               </Route>
