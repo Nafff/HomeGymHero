@@ -8,6 +8,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
+import DirectionsRunIcon from '@material-ui/icons/DirectionsRun';
 
 function Equipment(props) {
   const handleClick = (event) => {
@@ -239,6 +240,7 @@ function Equipment(props) {
           <Button
             variant="contained"
             color="primary"
+            endIcon={<DirectionsRunIcon />}
             className={classes.generateButton}
           >
             Generate Exercises
