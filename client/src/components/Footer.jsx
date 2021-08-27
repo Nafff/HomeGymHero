@@ -31,7 +31,7 @@ function Footer(props) {
       showLabels
       className={classes.root}
     >
-      <IconButton aria-label="delete">
+      <IconButton aria-label="delete" color="primary">
         <a href="https://github.com/Nafff">
           <GitHubIcon />
         </a>
@@ -57,7 +57,7 @@ function Footer(props) {
         value="excercises"
         icon={<FitnessCenterIcon />}
       />
-      <IconButton aria-label="delete">
+      <IconButton aria-label="delete" color="primary">
         <a href="https://www.linkedin.com/in/jacob-adick-3388b3123/">
           <LinkedInIcon />
         </a>
