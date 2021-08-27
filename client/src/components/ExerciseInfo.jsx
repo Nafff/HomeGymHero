@@ -45,9 +45,11 @@ function ExerciseInfo(props) {
         height="140"
         src={`https://www.youtube.com/embed/${selectedExercise.fields.videoUrl}`}
       ></iframe>
-      <h2>{selectedExercise.fields.bodyPart}</h2>
-      <h2>{selectedExercise.fields.equipment}</h2>
+      <h2>Body Part Worked: {selectedExercise.fields.bodyPart}</h2>
+      <h3>Required Equipment: {selectedExercise.fields.equipment}</h3>
+      <h5>Workout Info:</h5>
       <p>{selectedExercise.fields.workoutInfo}</p>
+      <h5>Workout Tips:</h5>
       <p>{selectedExercise.fields.workoutTips}</p>
       <Link to={`/edit/${params.id}`}>
         <Button
