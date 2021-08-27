@@ -20,6 +20,8 @@ function Equipment(props) {
   const useStyles = makeStyles((theme) => ({
     root: {
       maxWidth: 345,
+      backgroundColor: "#bababa",
+      color: "black",
     },
     media: {
       height: 140,
