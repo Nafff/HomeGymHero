@@ -10,11 +10,11 @@ import Form from "./components/Form";
 import ExerciseInfo from "./components/ExerciseInfo";
 import Equipment from "./components/Equipment";
 import Header from "./components/Header";
+import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
 
-// test
 {
   <link
     rel="stylesheet"
@@ -27,13 +27,29 @@ import Container from "@material-ui/core/Container";
     href="https://fonts.googleapis.com/icon?family=Material+Icons"
   />;
 }
-// test end
 
 function App() {
   const [equipment, setEquipment] = useState([]);
   const [exercises, setExercises] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(false);
   const [workout, setWorkout] = useState([]);
+
+  const [theme, setTheme] = useState({
+    palette: {
+      type: "dark",
+    },
+  });
+
+  const toggleDarkTheme = () => {
+    let newPaletteType = theme.palette.type === "dark" ? "light" : "dark";
+    setTheme({
+      palette: {
+        type: newPaletteType,
+      },
+    });
+  };
+
+  const toggleTheme = createTheme(theme);
 
   useEffect(() => {
     const getExercises = async () => {
@@ -44,16 +60,20 @@ function App() {
   }, [toggleFetch]);
 
   return (
-    <div className="App">
-      <Header
-        equipment={equipment}
-        exercises={exercises}
-        setEquipment={setEquipment}
-        workout={workout}
-        setWorkout={setWorkout}
-        setToggleFetch={setToggleFetch}
-      />
-      {/* <CssBaseline />
+    <ThemeProvider theme={toggleTheme}>
+      <div className="App">
+        <Header
+          equipment={equipment}
+          exercises={exercises}
+          setEquipment={setEquipment}
+          workout={workout}
+          setWorkout={setWorkout}
+          setToggleFetch={setToggleFetch}
+          theme={theme}
+          setTheme={setTheme}
+          onToggleDark={toggleDarkTheme}
+        />
+        {/* <CssBaseline />
       <Container maxWidth="sm"> */}
         <main>
           <Route path="/" exact>
@@ -83,8 +103,9 @@ function App() {
             <Form exercises={exercises} setToggleFetch={setToggleFetch} />
           </Route>
         </main>
-      {/* </Container> */}
-    </div>
+        {/* </Container> */}
+      </div>
+    </ThemeProvider>
   );
 }
 
