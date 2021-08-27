@@ -96,7 +96,6 @@
 
 // export default Sidebar;
 
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Offcanvas from "react-bootstrap/Offcanvas";
@@ -110,10 +109,8 @@ import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import ListItemText from "@material-ui/core/ListItemText";
 import Avatar from "@material-ui/core/Avatar";
-import IconButton from "@material-ui/core/IconButton";
-import FolderIcon from "@material-ui/icons/Folder";
-import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
-import AddIcon from "@material-ui/icons/Add";
+import FitnessCenterIcon from "@material-ui/icons/FitnessCenter";
+import EventSeatIcon from '@material-ui/icons/EventSeat';
 
 function Sidebar(props) {
   const [show, setShow] = useState(false);
@@ -146,6 +143,8 @@ function Sidebar(props) {
     }
   };
 
+  const [dense, setDense] = useState(false);
+
   return (
     <>
       <div>
@@ -159,42 +158,65 @@ function Sidebar(props) {
           <Offcanvas.Body>
             <div className="ownedEquip">
               <h4>Your Equipment</h4>
-              <ul>
+              <List dense={dense}>
                 {props.equipment.map((piece) => (
                   <>
-                    <li>{piece}</li>
-                    <Fab
-                      size="small"
-                      color="primary"
-                      aria-label="delete"
-                      onClick={handleEquipRemove}
-                      value={piece}
-                    >
-                      <DeleteIcon />
-                    </Fab>
+                    <ListItem>
+                      <ListItemAvatar>
+                        <Avatar>
+                          <FitnessCenterIcon />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText primary={piece} />
+                      <ListItemSecondaryAction>
+                        <IconButton
+                          edge="end"
+                          aria-label="delete"
+                          onClick={handleEquipRemove}
+                          value={piece}
+                        >
+                          <DeleteIcon />
+                        </IconButton>
+                      </ListItemSecondaryAction>
+                    </ListItem>
                   </>
                 ))}
-              </ul>
+              </List>
             </div>
             <div className="selectedExercises">
               <h4>Your Workout</h4>
-              <ul>
+              <List dense={dense}>
                 {props.workout.map((exercise) => (
                   <>
-                    <Link to={`/exerciseinfo/${handleExerciseId(exercise)}`}>
-                      <li>{exercise}</li>
-                    </Link>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      onClick={handleExerciseRemove}
-                      value={exercise}
-                    >
-                      -
-                    </Button>
+                    <ListItem>
+                      <ListItemAvatar>
+                        <Avatar>
+                          <FitnessCenterIcon />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText
+                        primary={
+                          <Link
+                            to={`/exerciseinfo/${handleExerciseId(exercise)}`}
+                          >
+                            <li>{exercise}</li>
+                          </Link>
+                        }
+                      />
+                      <ListItemSecondaryAction>
+                        <IconButton
+                          edge="end"
+                          aria-label="delete"
+                          onClick={handleExerciseRemove}
+                          value={exercise}
+                        >
+                          <DeleteIcon />
+                        </IconButton>
+                      </ListItemSecondaryAction>
+                    </ListItem>
                   </>
                 ))}
-              </ul>
+              </List>
             </div>
           </Offcanvas.Body>
         </Offcanvas>
