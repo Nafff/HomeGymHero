@@ -59,7 +59,11 @@ function Header(props) {
             >
               <MoreIcon />
             </IconButton> */}
-            <Button variant="contained" color="default" onClick={props.onToggleDark}>
+            <Button
+              variant="contained"
+              color="default"
+              onClick={props.onToggleDark}
+            >
               Toggle Theme Type
             </Button>
             <Sidebar

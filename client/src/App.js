@@ -11,7 +11,7 @@ import ExerciseInfo from "./components/ExerciseInfo";
 import Equipment from "./components/Equipment";
 import Header from "./components/Header";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
-import Paper from '@material-ui/core/Paper';
+import Paper from "@material-ui/core/Paper";
 
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
@@ -78,37 +78,39 @@ function App() {
           setTheme={setTheme}
           onToggleDark={toggleDarkTheme}
         />
-        {/* <CssBaseline />
-      <Container maxWidth="sm"> */}
-        <main>
-          <Route path="/" exact>
-            <Equipment equipment={equipment} setEquipment={setEquipment} />
-          </Route>
-          <Route path="/exercises/">
-            <Exercises
-              equipment={equipment}
-              exercises={exercises}
-              workout={workout}
-              setWorkout={setWorkout}
-              setToggleFetch={setToggleFetch}
-            />
-          </Route>
-          <Route path="/exerciseinfo/:id">
-            <ExerciseInfo
-              exercises={exercises}
-              workout={workout}
-              setWorkout={setWorkout}
-              setToggleFetch={setToggleFetch}
-            />
-          </Route>
-          <Route path="/new/">
-            <Form setToggleFetch={setToggleFetch} />
-          </Route>
-          <Route path="/edit/:id">
-            <Form exercises={exercises} setToggleFetch={setToggleFetch} />
-          </Route>
-        </main>
-        {/* </Container> */}
+        <CssBaseline />
+        <Container maxWidth="md">
+          <Paper>
+            <main>
+              <Route path="/" exact>
+                <Equipment equipment={equipment} setEquipment={setEquipment} />
+              </Route>
+              <Route path="/exercises/">
+                <Exercises
+                  equipment={equipment}
+                  exercises={exercises}
+                  workout={workout}
+                  setWorkout={setWorkout}
+                  setToggleFetch={setToggleFetch}
+                />
+              </Route>
+              <Route path="/exerciseinfo/:id">
+                <ExerciseInfo
+                  exercises={exercises}
+                  workout={workout}
+                  setWorkout={setWorkout}
+                  setToggleFetch={setToggleFetch}
+                />
+              </Route>
+              <Route path="/new/">
+                <Form setToggleFetch={setToggleFetch} />
+              </Route>
+              <Route path="/edit/:id">
+                <Form exercises={exercises} setToggleFetch={setToggleFetch} />
+              </Route>
+            </main>
+          </Paper>
+        </Container>
       </div>
     </ThemeProvider>
   );
