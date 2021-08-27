@@ -143,6 +143,10 @@ function Sidebar(props) {
     }
   };
 
+  const offcanvasBg = () => {
+    console.log(" ")
+  }
+
   const [dense, setDense] = useState(false);
 
   return (
@@ -151,7 +155,7 @@ function Sidebar(props) {
         <Button variant="contained" color="primary" onClick={handleShow}>
           Your Gym
         </Button>
-        <Offcanvas show={show} onHide={handleClose} placement={"end"}>
+        <Offcanvas show={show} onHide={handleClose} placement={"end"} style={{color:"blue"}}>
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>Your Gym</Offcanvas.Title>
           </Offcanvas.Header>

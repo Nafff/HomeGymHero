@@ -75,8 +75,6 @@ function Header(props) {
               setWorkout={props.setWorkout}
               setToggleFetch={props.setToggleFetch}
               theme={props.theme}
-              setTheme={props.setTheme}
-              onToggleDark={props.toggleDarkTheme}
             />
           </Toolbar>
         </AppBar>

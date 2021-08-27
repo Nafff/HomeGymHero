@@ -4,7 +4,6 @@ import { Link, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { baseURL, config } from "./services";
-import Sidebar from "./components/Sidebar";
 import Exercises from "./components/Exercises";
 import Form from "./components/Form";
 import ExerciseInfo from "./components/ExerciseInfo";

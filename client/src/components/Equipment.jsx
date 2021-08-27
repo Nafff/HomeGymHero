@@ -8,18 +8,9 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
+import "./Equipment.css"
 
 function Equipment(props) {
-  const equipPieces = [
-    "Barbell",
-    "Dumbbells",
-    "Kettlebells",
-    "Bands",
-    "Squat Rack",
-    "Bench",
-  ];
-
   const handleClick = (event) => {
     event.preventDefault();
     if (props.equipment.includes(event.currentTarget.value) !== true) {
@@ -42,6 +33,10 @@ function Equipment(props) {
       textAlign: "center",
       color: theme.palette.text.secondary,
     },
+    generateButton: {
+      marginTop: 10,
+      marginBottom: 25,
+    }
   }));
 
   const classes = useStyles();
@@ -239,7 +234,12 @@ function Equipment(props) {
       </Grid>
       <>
         <Link to="/exercises/">
-          <Button variant="contained">Generate Exercises</Button>
+          <Button
+            variant="contained"
+            className={classes.generateButton}
+          >
+            Generate Exercises
+          </Button>
         </Link>
       </>
     </>
