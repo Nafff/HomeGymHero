@@ -238,6 +238,7 @@ function Equipment(props) {
         <Link to="/exercises/">
           <Button
             variant="contained"
+            color="primary"
             className={classes.generateButton}
           >
             Generate Exercises
