@@ -10,7 +10,6 @@ import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import ListItemText from "@material-ui/core/ListItemText";
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
-import FolderIcon from "@material-ui/icons/Folder";
 import FitnessCenterIcon from "@material-ui/icons/FitnessCenter";
 import AddIcon from "@material-ui/icons/Add";
 
