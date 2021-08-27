@@ -13,6 +13,7 @@ import Avatar from "@material-ui/core/Avatar";
 import FitnessCenterIcon from "@material-ui/icons/FitnessCenter";
 import EventSeatIcon from "@material-ui/icons/EventSeat";
 import Divider from "@material-ui/core/Divider";
+import Badge from "@material-ui/core/Badge";
 
 function Sidebar(props) {
   const [show, setShow] = useState(false);
@@ -59,7 +60,19 @@ function Sidebar(props) {
     <>
       <div>
         <Button variant="contained" color="primary" onClick={handleShow}>
-          Your Gym
+          <Badge
+            badgeContent={props.equipment.length}
+            color="secondary"
+            anchorOrigin={{
+              vertical: "top",
+              horizontal: "left",
+            }}
+          >
+            <EventSeatIcon />
+          </Badge>
+          <Badge badgeContent={props.workout.length} color="secondary">
+            <FitnessCenterIcon />
+          </Badge>
         </Button>
         <Offcanvas
           show={show}
