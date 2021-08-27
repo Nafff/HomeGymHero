@@ -120,7 +120,7 @@ function Header(props) {
             <Typography variant="h6" className={classes.title}>
               Home Gym Hero
             </Typography>
-            <Button color="inherit">
+            <Button variant="contained" color="primary">
               <Link to="/">Equipment</Link>
             </Button>
             <Sidebar

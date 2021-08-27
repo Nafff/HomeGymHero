@@ -25,6 +25,29 @@ function Exercises(props) {
 
   const [dense, setDense] = useState(false);
 
+  const useStyles = makeStyles((theme) => ({
+    root: {
+      maxWidth: 345,
+    },
+    media: {
+      height: 140,
+    },
+    gridRoot: {
+      flexGrow: 1,
+    },
+    gridCard: {
+      padding: theme.spacing(2),
+      textAlign: "center",
+      color: theme.palette.text.secondary,
+    },
+    generateButton: {
+      marginTop: 10,
+      marginBottom: 25,
+    }
+  }));
+
+  const classes = useStyles();
+
   return (
     <>
       <List dense={dense}>

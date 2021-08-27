@@ -68,7 +68,7 @@ function Sidebar(props) {
           style={offcanvasBg()}
         >
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title>Your Gym</Offcanvas.Title>
+            <Offcanvas.Title></Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <div className="ownedEquip">
@@ -100,7 +100,6 @@ function Sidebar(props) {
             </div>
             <br />
             <Divider />
-            <br />
             <br />
             <div className="selectedExercises">
               <h4>Your Workout</h4>
