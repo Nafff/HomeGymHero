@@ -48,10 +48,10 @@ function Equipment(props) {
   return (
     <>
       <Grid container spacing={1}>
-        <Grid container item xs={12} spacing={3}>
-          {equipPieces.map((piece) => (
-            <div className={classes.gridCard}>
-              <Grid item m={4}>
+        {equipPieces.map((piece) => (
+          <Grid container item xs={4} spacing={2}>
+            <Grid item m={4}>
+              <div className={classes.gridCard}>
                 <Card className={classes.root}>
                   <CardActionArea>
                     <CardMedia
@@ -79,10 +79,10 @@ function Equipment(props) {
                     </Button>
                   </CardActions>
                 </Card>
-              </Grid>
-            </div>
-          ))}
-        </Grid>
+              </div>
+            </Grid>
+          </Grid>
+        ))}
       </Grid>
       <>
         <Link to="/exercises/">

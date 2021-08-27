@@ -11,6 +11,7 @@ import ExerciseInfo from "./components/ExerciseInfo";
 import Equipment from "./components/Equipment";
 import Header from "./components/Header";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
+import Paper from '@material-ui/core/Paper';
 
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
