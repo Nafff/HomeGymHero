@@ -41,11 +41,8 @@ function Header(props) {
         <AppBar position="static">
           <Toolbar>
             <Typography variant="h6" className={classes.title}>
-              Home Gym Hero
+              <Link to="/">Home Gym Hero</Link>
             </Typography>
-            <Button variant="contained" color="primary">
-              <Link to="/">Equipment</Link>
-            </Button>
             <Button
               variant="contained"
               color="primary"

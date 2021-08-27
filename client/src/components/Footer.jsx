@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
-import RestoreIcon from "@material-ui/icons/Restore";
+import AddBoxIcon from "@material-ui/icons/AddBox";
 import FitnessCenterIcon from "@material-ui/icons/FitnessCenter";
 import EventSeatIcon from "@material-ui/icons/EventSeat";
 
@@ -31,6 +31,13 @@ function Footer(props) {
     >
       <BottomNavigationAction
         component={Link}
+        to="/new/"
+        label="Add New Exercise"
+        value="new"
+        icon={<AddBoxIcon />}
+      />
+      <BottomNavigationAction
+        component={Link}
         to="/"
         label="Equipment"
         value="equipment"
@@ -40,7 +47,7 @@ function Footer(props) {
         component={Link}
         to="/exercises/"
         label="Exercises"
-        value="equipment"
+        value="excercises"
         icon={<FitnessCenterIcon />}
       />
     </BottomNavigation>

@@ -16,15 +16,20 @@ const useStyles = makeStyles((theme) => ({
   root: {
     "& .MuiTextField-root": {
       margin: theme.spacing(1),
-      width: "25ch",
+      width: "80%",
     },
   },
   formControl: {
     margin: theme.spacing(1),
     minWidth: 120,
+    width: "80%",
   },
   selectEmpty: {
     marginTop: theme.spacing(2),
+  },
+  submitButton: {
+    marginTop: 10,
+    marginBottom: 25,
   },
 }));
 
@@ -90,7 +95,6 @@ function Form(props) {
           id="outlined-helperText"
           label="Exercise Name:"
           defaultValue="Default Value"
-          helperText="Some important text"
           variant="outlined"
           value={exercise}
           onChange={(e) => setExercise(e.target.value)}
@@ -100,7 +104,7 @@ function Form(props) {
           id="outlined-helperText"
           label="Video URL:"
           defaultValue="Default Value"
-          helperText="Some important text"
+          helperText="Please enter the text after https://www.youtube.com/watch?v="
           variant="outlined"
           value={videoUrl}
           onChange={(e) => setVideoUrl(e.target.value)}
@@ -171,6 +175,7 @@ function Form(props) {
           color="primary"
           startIcon={<AddIcon />}
           type="submit"
+          className={classes.submitButton}
         >
           Submit
         </Button>
