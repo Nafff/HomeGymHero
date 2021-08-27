@@ -36,7 +36,7 @@ function Exercises(props) {
 
   return (
     <>
-      <h5>Select The Exercises You Would Like To Do Today</h5>
+      <h5>Select The Exercises For Your Workout</h5>
       <List dense={dense}>
         {availEx.map((exercise) => (
           <>
