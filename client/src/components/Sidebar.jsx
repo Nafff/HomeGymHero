@@ -144,7 +144,11 @@ function Sidebar(props) {
   };
 
   const offcanvasBg = () => {
-    console.log(" ")
+    if (props.theme.palette.type === 'dark') {
+      return {backgroundColor:"#222222"}
+    } else {
+      return {backgroundColor:"white"}
+    }
   }
 
   const [dense, setDense] = useState(false);
@@ -155,7 +159,7 @@ function Sidebar(props) {
         <Button variant="contained" color="primary" onClick={handleShow}>
           Your Gym
         </Button>
-        <Offcanvas show={show} onHide={handleClose} placement={"end"} style={{color:"blue"}}>
+        <Offcanvas show={show} onHide={handleClose} placement={"end"} style={offcanvasBg()}>
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>Your Gym</Offcanvas.Title>
           </Offcanvas.Header>
