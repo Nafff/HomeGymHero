@@ -164,7 +164,7 @@ function Sidebar(props) {
                     <ListItem>
                       <ListItemAvatar>
                         <Avatar>
-                          <FitnessCenterIcon />
+                          <EventSeatIcon />
                         </Avatar>
                       </ListItemAvatar>
                       <ListItemText primary={piece} />
