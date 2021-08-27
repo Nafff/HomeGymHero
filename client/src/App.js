@@ -79,7 +79,7 @@ function App() {
         />
         <CssBaseline />
         <Container maxWidth="md">
-          <Paper className="paperContainer">
+          <Paper elevation={3} className="paperContainer">
             <main>
               <br />
               <Route path="/" exact>

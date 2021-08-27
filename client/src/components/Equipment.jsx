@@ -8,7 +8,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import DirectionsRunIcon from '@material-ui/icons/DirectionsRun';
+import DirectionsRunIcon from "@material-ui/icons/DirectionsRun";
 
 function Equipment(props) {
   const handleClick = (event) => {
@@ -38,7 +38,7 @@ function Equipment(props) {
     generateButton: {
       marginTop: 10,
       marginBottom: 25,
-    }
+    },
   }));
 
   const classes = useStyles();
@@ -50,7 +50,7 @@ function Equipment(props) {
       <Grid container spacing={3} justifyContent="center">
         <Grid item m>
           <div className={classes.gridCard}>
-            <Card className={classes.root}>
+            <Card className={classes.root} elevation={3}>
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
@@ -81,7 +81,7 @@ function Equipment(props) {
         </Grid>
         <Grid item m>
           <div className={classes.gridCard}>
-            <Card className={classes.root}>
+            <Card className={classes.root} elevation={3}>
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
@@ -112,7 +112,7 @@ function Equipment(props) {
         </Grid>
         <Grid item m>
           <div className={classes.gridCard}>
-            <Card className={classes.root}>
+            <Card className={classes.root} elevation={3}>
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
@@ -143,7 +143,7 @@ function Equipment(props) {
         </Grid>
         <Grid item m>
           <div className={classes.gridCard}>
-            <Card className={classes.root}>
+            <Card className={classes.root} elevation={3}>
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
@@ -174,7 +174,7 @@ function Equipment(props) {
         </Grid>
         <Grid item m>
           <div className={classes.gridCard}>
-            <Card className={classes.root}>
+            <Card className={classes.root} elevation={3}>
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
@@ -205,7 +205,7 @@ function Equipment(props) {
         </Grid>
         <Grid item m>
           <div className={classes.gridCard}>
-            <Card className={classes.root}>
+            <Card className={classes.root} elevation={3}>
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
