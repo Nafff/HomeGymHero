@@ -36,6 +36,7 @@ function Header(props) {
       <div className={classes.root}>
         <AppBar position="static">
           <Toolbar>
+          <img src="https://res.cloudinary.com/dy6xpqkkj/image/upload/c_scale,w_45/v1630091005/Home%20Gym%20Hero/pictures/gymicon_v5zw8l.png" class="w3-round" alt="Norway" />
             <Typography variant="h6" className={classes.title}>
               <Link to="/">Home Gym Hero</Link>
             </Typography>
