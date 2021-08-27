@@ -158,7 +158,7 @@ function Equipment(props) {
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Dumbbells
+                    Barbell
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -167,7 +167,7 @@ function Equipment(props) {
                   size="small"
                   color="primary"
                   onClick={handleClick}
-                  value="Dumbbells"
+                  value="Barbell"
                 >
                   Add To List
                 </Button>
@@ -220,7 +220,7 @@ function Equipment(props) {
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Dumbbells
+                    Kettlebells
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -229,7 +229,7 @@ function Equipment(props) {
                   size="small"
                   color="primary"
                   onClick={handleClick}
-                  value="Dumbbells"
+                  value="Kettlebells"
                 >
                   Add To List
                 </Button>
@@ -251,7 +251,7 @@ function Equipment(props) {
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Dumbbells
+                    Bands
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -260,7 +260,7 @@ function Equipment(props) {
                   size="small"
                   color="primary"
                   onClick={handleClick}
-                  value="Dumbbells"
+                  value="Bands"
                 >
                   Add To List
                 </Button>

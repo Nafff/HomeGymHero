@@ -66,6 +66,7 @@ function Header(props) {
             >
               Toggle Theme Type
             </Button>
+            
             <Sidebar
               equipment={props.equipment}
               exercises={props.exercises}
@@ -73,6 +74,9 @@ function Header(props) {
               workout={props.workout}
               setWorkout={props.setWorkout}
               setToggleFetch={props.setToggleFetch}
+              theme={props.theme}
+              setTheme={props.setTheme}
+              onToggleDark={props.toggleDarkTheme}
             />
           </Toolbar>
         </AppBar>

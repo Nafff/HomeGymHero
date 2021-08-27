@@ -1,15 +1,16 @@
-import { useState, useEffect } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
-import Divider from "@material-ui/core/Divider";
-import { blueGrey, grey } from "@material-ui/core/colors";
 import Button from "@material-ui/core/Button";
 import AddBoxIcon from "@material-ui/icons/AddBox";
-import AddIcon from "@material-ui/icons/Add";
-import Fab from "@material-ui/core/Fab";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemAvatar from "@material-ui/core/ListItemAvatar";
+import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
+import ListItemText from "@material-ui/core/ListItemText";
+import Avatar from "@material-ui/core/Avatar";
+import IconButton from "@material-ui/core/IconButton";
+import FolderIcon from "@material-ui/icons/Folder";
+import DeleteIcon from "@material-ui/icons/Delete";
 
 function Exercises(props) {
   const availEx = props.exercises.filter((exercise) =>
@@ -21,28 +22,31 @@ function Exercises(props) {
     props.setWorkout(props.workout.concat(event.currentTarget.value));
   };
 
+  const [dense, setDense] = useState(false);
+
   return (
     <>
-      <List
-        component="nav"
-        className="exercisesList"
-        aria-label="mailbox folders"
-      >
+      <List dense={dense}>
         {availEx.map((exercise) => (
           <>
-            <Link to={`/exerciseinfo/${exercise.id}`}>
-              {exercise.fields.exercise}
-            </Link>{" "}
-            <Fab
-              size="small"
-              color="primary"
-              aria-label="add"
-              onClick={handleAdd}
-              value={exercise.fields.exercise}
-            >
-              <AddIcon />
-            </Fab>
-            <Divider />
+            <ListItem>
+              <ListItemAvatar>
+                <Avatar>
+                  <FolderIcon />
+                </Avatar>
+              </ListItemAvatar>
+              <ListItemText primary={exercise.fields.exercise} />
+              <ListItemSecondaryAction>
+                <IconButton
+                  edge="end"
+                  aria-label="delete"
+                  onClick={handleAdd}
+                  value={exercise.fields.exercise}
+                >
+                  <DeleteIcon />
+                </IconButton>
+              </ListItemSecondaryAction>
+            </ListItem>
           </>
         ))}
       </List>
