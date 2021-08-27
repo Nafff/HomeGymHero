@@ -51,7 +51,7 @@ function Equipment(props) {
         <Grid container item xs={12} spacing={3}>
           {equipPieces.map((piece) => (
             <div className={classes.gridCard}>
-              <Grid item xs={4}>
+              <Grid item m={4}>
                 <Card className={classes.root}>
                   <CardActionArea>
                     <CardMedia

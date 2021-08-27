@@ -37,6 +37,9 @@ function App() {
   const [theme, setTheme] = useState({
     palette: {
       type: "dark",
+      background: {
+        default: "#222222",
+      },
     },
   });
 
@@ -61,6 +64,7 @@ function App() {
 
   return (
     <ThemeProvider theme={toggleTheme}>
+      <CssBaseline />
       <div className="App">
         <Header
           equipment={equipment}
