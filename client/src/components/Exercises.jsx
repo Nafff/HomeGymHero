@@ -10,7 +10,8 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Avatar from "@material-ui/core/Avatar";
 import IconButton from "@material-ui/core/IconButton";
 import FolderIcon from "@material-ui/icons/Folder";
-import DeleteIcon from "@material-ui/icons/Delete";
+import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
+import AddIcon from "@material-ui/icons/Add";
 
 function Exercises(props) {
   const availEx = props.exercises.filter((exercise) =>
@@ -32,7 +33,7 @@ function Exercises(props) {
             <ListItem>
               <ListItemAvatar>
                 <Avatar>
-                  <FolderIcon />
+                  <FitnessCenterIcon />
                 </Avatar>
               </ListItemAvatar>
               <ListItemText primary={exercise.fields.exercise} />
@@ -43,7 +44,7 @@ function Exercises(props) {
                   onClick={handleAdd}
                   value={exercise.fields.exercise}
                 >
-                  <DeleteIcon />
+                  <AddIcon />
                 </IconButton>
               </ListItemSecondaryAction>
             </ListItem>
