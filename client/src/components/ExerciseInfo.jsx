@@ -30,6 +30,7 @@ function ExerciseInfo(props) {
     exerciseButtons: {
       marginTop: 10,
       marginBottom: 25,
+      width: 200,
     },
   }));
 
